@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="__STATIC__/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="__STATIC__/css/header.css" />
+    <link rel="stylesheet" href="__STATIC__/font-awesome/css/font-awesome.min.css">
+    <script src="__STATIC__/js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="__STATIC__/js/bootstrap.min.js"  type="text/javascript" charset="utf-8"></script>
+    <script src="__STATIC__/js/common.js"  type="text/javascript" charset="utf-8"></script>
+    <style>
+        .container-bar{
+            width: 100%;
+            height: auto;
+            position: absolute;
+        }
+        .video-player-bar{
+            width: 60%;
+            height: 480px;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="header-logo-bar">
+        <div class="header-logo-msg">
+            <!--<div class="logo">
+
+            </div>
+            <div class="logo">
+
+            </div>-->
+        </div>
+        <div class="header-personal-message">
+            <span><a href="#"></a></span>
+            <span><a href="#"></a></span>
+            <div class="profile-photo">
+                <img src="__STATIC__/imgs/{$head_picture.picture}" alt="" class="profile-photo-size">
+            </div>
+        </div>
+    </div>
+    <div class="nav-bar">
+        <ul class="nav">
+            <a href="{:url('index/index/home')}">首页</a>
+        </ul>
+        <ul>
+            <a href="#">前端</a>
+            <ul class="plat">
+                <li><a href="{:url('index/index/scourse')}?type=html">HTML</a></li>
+                <li><a href="{:url('index/index/scourse')}?type=css">CSS</a></li>
+                <li><a href="{:url('index/index/scourse')}?type=javascript">Javascript</a></li>
+            </ul>
+        </ul>
+        <ul>
+            <a href="#">后端</a>
+            <ul class="plat">
+                <li><a href="{:url('index/index/scourse')}?type=java">Java</a></li>
+                <li><a href="{:url('index/index/scourse')}?type=c">c++</a></li>
+                <li><a href="{:url('index/index/scourse')}?type=php">PHP</a></li>
+                <li><a href="{:url('index/index/scourse')}?type=python">python</a></li>
+            </ul>
+        </ul>
+        <ul>
+            <a href="#">移动</a>
+            <ul class="plat">
+                <li><a href="{:url('index/index/scourse')}?type=ios">ios</a></li>
+                <li><a href="{:url('index/index/scourse')}?type=android">Android</a></li>
+            </ul>
+        </ul>
+        <ul>
+            <a href="#">数据库</a>
+            <ul class="plat">
+                <li><a href="{:url('index/index/scourse')}?type=mysql">MySQL</a></li>
+                <li><a href="{:url('index/index/scourse')}?type=sqlserver">SQLServer</a></li>
+                <li><a href="{:url('index/index/scourse')}?type=oracle">Oracle</a></li>
+            </ul>
+        </ul>
+    </div>
+</div>
+<div class="personal-msg">
+    <div class="personal-msg-bar">
+        <div class="personal-msg-profile-photo"><img src="__STATIC__/imgs/{$head_picture.picture}" alt="" class="profile-photo-size"></div>
+        <div class="personal-msg-username"><span>{$username}</span></div>
+    </div>
+    <div class="personal-msg-order">
+        <div class="personal-msg-btn"><a href="#">我的课程</a></div>
+        <div class="personal-msg-btn"><a href="{:url('index/personal/personal')}">个人信息</a></div>
+    </div>
+    <div class="personal-msg-order">
+        <div class="personal-msg-btn"><a href="#">最近浏览</a></div>
+        <div class="personal-msg-btn"><a href="#" id="logout">退出登录</a></div>
+    </div>
+</div>
+<div class="container-bar mt-3 d-flex justify-content-center">
+    <div class="d-flex justify-content-center video-player-bar">
+        <video type="video/mp4" src="__STATIC__/course/video/{$video}" autoplay="autoplay" controls="controls" class="video-player"></video>
+    </div>
+</div>
+<dialog id="logout-bar" class="logout-bar mt-3 " >
+    <div class="d-flex flex-column">
+        <div class="d-flex justify-content-end">
+            <button id="gg" class="close-btn"><i class="fa fa-times" aria-hidden="true"></i></button>
+        </div>
+        <div class="d-flex justify-content-center margin-top-20">
+            <span>确认是否退出登录</span>
+        </div>
+        <div class="d-flex justify-content-around margin-top-20">
+            <a href="" class="logout-btn">取消</a>
+            <a href="{:url('index/index/logout')}" class="logout-btn">确定</a>
+        </div>
+    </div>
+</dialog>
+</body>
+</html>

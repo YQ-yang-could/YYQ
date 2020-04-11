@@ -1,0 +1,65 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:74:"D:\phpstudy_pro\WWW\moly\public/../application/index\view\index\login.html";i:1571196536;}*/ ?>
+
+<!DOCTYPE html>
+<html>
+
+<!-- Head -->
+<head>
+
+	<title>登录表单</title>
+
+	<!-- Meta-Tags -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- //Meta-Tags -->
+
+	<!-- Style --> <link rel="stylesheet" href="/static/css/style.css" type="text/css" media="all">
+
+
+
+</head>
+<!-- //Head -->
+
+<!-- Body -->
+<body>
+
+	<h1>登录表单</h1>
+
+	<div class="container w3layouts agileits">
+
+		<div class="login w3layouts agileits">
+			<h2>登 录</h2>
+			<form action="<?php echo url('index/index/login'); ?>" method="post">
+				<input type="text" Name="username" placeholder="用户名" required="">
+				<input type="password" Name="password" placeholder="密码" required="">
+				<div class="send-button w3layouts agileits">
+						<input type="submit" value="登 录">
+				</div>
+			</form>
+			<a href="#">忘记密码?</a>
+
+			<div class="clear"></div>
+		</div><div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >企业网站模板</a></div>
+		<div class="register w3layouts agileits">
+			<h2>注 册</h2>
+			<form action="<?php echo url('index/index/register'); ?>" method="post">
+				<input type="text" Name="username" placeholder="用户名" required="">
+				<input type="password" Name="password" placeholder="密码" required="">
+				<input type="password" Name="repassword" placeholder="确认密码" required="">
+				<div class="send-button w3layouts agileits">
+						<input type="submit" value="注册">
+				</div>
+			</form>
+
+			<div class="clear"></div>
+		</div>
+
+		<div class="clear"></div>
+
+	</div>
+
+</body>
+<!-- //Body -->
+
+</html>

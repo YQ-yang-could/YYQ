@@ -1,0 +1,20 @@
+ $(document).ready(function(){
+        $("div.profile-photo").mouseenter(function(){
+            $("div.personal-msg").show(500);
+        });
+        $("div.personal-msg").mouseleave(function(){
+            $("div.personal-msg").hide(500);
+        });
+        $("div.nav-bar").mouseenter(function(){
+            $("div.personal-msg").hide(500);
+        });
+        $("#logout").click(function () {
+            $("#logout-bar").show();
+        })
+        $("#logoutb").click(function () {
+            $("#logout-bar").show();
+        })
+        $("#gg").click(function () {
+            $("#logout-bar").hide();
+        })
+    });

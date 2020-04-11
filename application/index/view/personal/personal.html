@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>setting页面</title>
+    <link rel="stylesheet" href="__STATIC__/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="__STATIC__/css/header.css" />
+    <link rel="stylesheet" href="__STATIC__/font-awesome/css/font-awesome.min.css">
+    <script src="__STATIC__/js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="__STATIC__/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="__STATIC__/js/metisMenu.min.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="__STATIC__/js/common.js"  type="text/javascript" charset="utf-8"></script>
+    <style type="text/css">
+        .container{
+            width: 100%;
+            height: 100%;
+            top: 25%;
+            position:absolute;
+            size: a3;
+        }
+        .col-md-9{
+            width: 100%;
+            height: 100%;
+            top:5%;
+            left: 24%;
+            position: absolute;
+        }
+        .panel{
+            height: 100%;
+            width: 100%;
+        }
+        .panel-body{
+            width: 100%;
+            height: 100%;
+
+        }
+        .col-md-2{
+            height: 25px;
+            width: 100px;
+        }
+        .form-group{
+            width: 100%;
+            height: 100%;
+        }
+        .form-horizontal{
+            margin-left: 2%;
+            overflow: auto;
+        }
+        .head-picture{
+            width: 100px;
+            height: 100px;
+            margin: 24px 64px 24px 64px;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="header-logo-bar">
+        <div class="header-logo-msg">
+            <!--<div class="logo">
+
+            </div>
+            <div class="logo">
+
+            </div>-->
+        </div>
+        <div class="header-personal-message">
+            <span><a href="#"></a></span>
+            <span><a href="#"></a></span>
+            <div class="profile-photo">
+                <img src="__STATIC__/imgs/{$head_picture.picture}" alt="" class="profile-photo-size">
+            </div>
+        </div>
+    </div>
+    <div class="nav-bar">
+        <ul class="nav">
+            <a href="{:url('index/index/home')}">首页</a>
+        </ul>
+        <ul>
+            <a href="#">前端</a>
+            <ul class="plat">
+                <li><a href="{:url('index/index/scourse')}?type=html">HTML</a></li>
+                <li><a href="{:url('index/index/scourse')}?type=css">CSS</a></li>
+                <li><a href="{:url('index/index/scourse')}?type=javascript">Javascript</a></li>
+            </ul>
+        </ul>
+        <ul>
+            <a href="#">后端</a>
+            <ul class="plat">
+                <li><a href="{:url('index/index/scourse')}?type=java">Java</a></li>
+                <li><a href="{:url('index/index/scourse')}?type=c">c++</a></li>
+                <li><a href="{:url('index/index/scourse')}?type=php">PHP</a></li>
+                <li><a href="{:url('index/index/scourse')}?type=python">python</a></li>
+            </ul>
+        </ul>
+        <ul>
+            <a href="#">移动</a>
+            <ul class="plat">
+                <li><a href="{:url('index/index/scourse')}?type=ios">ios</a></li>
+                <li><a href="{:url('index/index/scourse')}?type=android">Android</a></li>
+            </ul>
+        </ul>
+        <ul>
+            <a href="#">数据库</a>
+            <ul class="plat">
+                <li><a href="{:url('index/index/scourse')}?type=mysql">MySQL</a></li>
+                <li><a href="{:url('index/index/scourse')}?type=sqlserver">SQLServer</a></li>
+                <li><a href="{:url('index/index/scourse')}?type=oracle">Oracle</a></li>
+            </ul>
+        </ul>
+    </div>
+</div>
+<div class="personal-msg">
+    <div class="personal-msg-bar">
+        <div class="personal-msg-profile-photo"><img src="__STATIC__/imgs/{$head_picture.picture}" alt="" class="profile-photo-size"></div>
+        <div class="personal-msg-username"><span>{$usermsg.username}</span></div>
+    </div>
+    <div class="personal-msg-order">
+        <div class="personal-msg-btn"><a href="#">我的课程</a></div>
+        <div class="personal-msg-btn"><a href="{:url('index/personal/personal')}">个人信息</a></div>
+    </div>
+    <div class="personal-msg-order">
+        <div class="personal-msg-btn"><a href="#">最近浏览</a></div>
+        <div class="personal-msg-btn"><a href="#" id="logout">退出登录</a></div>
+    </div>
+</div>
+<div id="content-container" class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="sidenav">
+                <ul class="list-group">
+                    <h2>设置</h2>
+                    <li class="list-group-item ">
+                        <a href="personal.html">个人信息</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="settings.html#news">修改信息</a>
+                    </li>
+                    <!--<li class="list-group-item ">-->
+                    <!--<a href="caozuojiankong.html">操作记录</a>-->
+                    <!--</li>-->
+                    <li class="list-group-item ">
+                        <a href="#tuichu"class="header-nav-item"  data-toggle="modal"  id="logoutb" style="margin-right:0px;font-size:14px;">退出登录</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="col-md-9">
+
+            <div id="news" class="panel">
+                <div class="panel-heading"><h4>个人信息</h4></div>
+                <div class="panel-body">
+
+                    <form id="user-profile-form" class="form-horizontal" method="post" novalidate="novalidate" data-widget-cid="widget-1">
+                        <div class="head-picture">
+                            <img src="__STATIC__/imgs/{$head_picture.picture}" alt="" class="profile-photo-size">
+                        </div>
+                        <div class="form-group">
+                            <span class="col-md-2 control-span"style="margin-top: 2%;">用户名:{$usermsg.username}</span>
+                        </div>
+
+                        <div class="form-group">
+                            <span class="col-md-2 control-span" for="profile_truename">姓名:{$usermsg.name}</span>
+                        </div>
+
+                        <div class="form-group">
+                            <span class="col-md-2 control-span">性别:{$usermsg.gender}</span>
+                        </div>
+
+                        <div class="form-group">
+                            <span for="profile_mobile" class="col-md-2 control-span">手机号码:{$usermsg.phone}</span>
+                        </div>
+
+                        <div class="form-group form-forIam-group form-notStudent-group">
+                            <span class="col-md-2 control-span">邮箱:{$usermsg.email}</span>
+                        </div>
+
+                        <div class="form-group form-forIam-group form-notStudent-group">
+                            <span class="col-md-2 control-span">住址:{$usermsg.address}</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<dialog id="logout-bar" class="logout-bar mt-3 " >
+    <div class="d-flex flex-column">
+        <div class="d-flex justify-content-end">
+            <button id="gg" class="close-btn"><i class="fa fa-times" aria-hidden="true"></i></button>
+        </div>
+        <div class="d-flex justify-content-center margin-top-20">
+            <span>确认是否退出登录</span>
+        </div>
+        <div class="d-flex justify-content-around margin-top-20">
+            <a href="" class="logout-btn">取消</a>
+            <a href="{:url('index/index/logout')}" class="logout-btn">确定</a>
+        </div>
+    </div>
+</dialog>
+</body>
+</html>
