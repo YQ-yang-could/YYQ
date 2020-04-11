@@ -1,1 +1,2 @@
 进入moly/application/database.php配置数据库
+moly 是一个使用THinkPHP框架实现的简易学习平台，实现了慕课网的视频学习功能，其余功能正慢慢完善中其中部署的是PHPstudy服务器，使用warmserver时会有些不正常，目前还没查明原因。
